@@ -1,7 +1,7 @@
 ---
 name: todo
 about: 자기가 어떤거 어떤거를 할 예정이고 했는지를 기록합시다.
-title: "[todo] [input nickname] [input from_date ~ to_date]"
+title: "[todo] [input_nickname] title(from_date~to_date)"
 labels: todo
 assignees: ''
 
@@ -9,7 +9,6 @@ assignees: ''
 
 ## 챕터
 >
-## 설명
 ## todo
 - [ ] todo1
 - [ ] todo2
