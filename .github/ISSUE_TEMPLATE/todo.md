@@ -16,6 +16,7 @@ assignees: ''
 -[] todo2
 -[] todo3
 > 추가로 적어도 됩니다.
-## dead line
->언제 끝나는지 적어주세요
-mm/dd
+## Start and End
+>언제 시작했고 끝나는지 적어주세요
+start: 
+End:
