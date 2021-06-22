@@ -10,6 +10,28 @@ public class Application implements OnClickListener{
         menu2.setOnClickListener(this);
         button1.setOnClickListener(this);
     }
+    private OnClickListener menuListener = new OnClickListener(){
+        public void clicked(Component eventSource){
+            String sourceId = eventSource.getId();
+            if(surceId.equals("menu1")){
+                currentScreen = new Menu1ScreenUI();
+            }
+            else if(surceId.equals("menu2")){
+                currentScreen = new Menu2ScreenUI()''
+            }
+            currentScreen.show();
+        }
+    }
+    private OnClickListener buttonListener= new OnClickListener)(){
+        public void clicked(Component eventSource){
+            if(currentScreen == null)
+                return ;
+            String sourceId = eventSource.getId();
+            if(sourceId.equals("button1"))
+                currentScreen.handleButton1Click();
+            
+        }
+    }
     public void clicked(Component eventSource){
         String sourceId = eventSource.getId();
         if(sourceId.equels("menu1")){
