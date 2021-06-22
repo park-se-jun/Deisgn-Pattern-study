@@ -44,4 +44,26 @@ public interface ScreenUI{
     public void show();
     public void handleButton1Click();
 }
+public class Menu1ScreenUI implements ScreenUI{
+    @Override
+    public void show(){System.out.print("메뉴1 화면으로 전환");}
 
+    @Override
+    public void handleButton1Click() {
+        System.out.println("메뉴1 화면의 버튼1 처리");
+        
+    }
+}
+public class Menu2ScreenUI implements ScreenUI{
+
+    @Override
+    public void show() {
+        System.out.println("메뉴2 화면으로 전환");
+        
+    }
+
+    @Override
+    public void handleButton1Click() {
+        System.out.println("메뉴2화면의 버튼 1 처리");
+    }
+}
