@@ -65,6 +65,7 @@ public class Application implements OnClickListener{
 public interface ScreenUI{
     public void show();
     public void handleButton1Click();
+    public void handleButton2Click();
 }
 public class Menu1ScreenUI implements ScreenUI{
     @Override
@@ -73,6 +74,12 @@ public class Menu1ScreenUI implements ScreenUI{
     @Override
     public void handleButton1Click() {
         System.out.println("메뉴1 화면의 버튼1 처리");
+        
+    }
+
+    @Override
+    public void handleButton2Click() {
+        System.out.println("메뉴1 화면의 버튼2 처리");
         
     }
 }
@@ -87,5 +94,10 @@ public class Menu2ScreenUI implements ScreenUI{
     @Override
     public void handleButton1Click() {
         System.out.println("메뉴2화면의 버튼 1 처리");
+    }
+
+    @Override
+    public void handleButton2Click() {
+        System.out.println("메뉴2 화면의 버튼2 처리");
     }
 }
