@@ -3,7 +3,7 @@ public class Application implements OnClickListener{
     private Menu menu2 = new Menu("menu2");
     private Button button1 = new Button("button1");
 
-    private String currentMenu = null;
+    private ScreenUI currentScreen = null;
 
     public Application(){
         menu1.setOnClickListener(this);
@@ -11,17 +11,17 @@ public class Application implements OnClickListener{
         button1.setOnClickListener(this);
     }
     public void clicked(Component eventSource){
-        if(eventSource.getId().equels("menu1")){
-            changeUIToMenu1();
-        }else if (eventSource.getId().equals("menu2")){
-            changeUIToMenu2();
-        }else if (eventSource.getId().equals("button1")){
-            if(currentMenu == null)
+        String sourceId = eventSource.getId();
+        if(sourceId.equels("menu1")){
+            currentScreen = new Menu1ScreenUI();
+            currentScreen.show();
+        }else if (sourceId.equals("menu2")){
+            currentScreen = new Menu2ScreenUI();
+            currentScreen.show();
+        }else if (sourceId.equals("button1")){
+            if(currentScreen == null)
                 return ; 
-            if(currentMenu.equals("menu1"))
-                processButton1WhenMenu1();
-            else if (currentMenu.equals("menu2"))
-                processButton1WhenMenu2();
+            currentScreen.handleButton1Click();
         }
     }
     private void changeUIToMenu1(){
