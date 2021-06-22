@@ -40,3 +40,8 @@ public class Application implements OnClickListener{
     }
 }
 
+public interface ScreenUI{
+    public void show();
+    public void handleButton1Click();
+}
+
